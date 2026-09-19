@@ -29,8 +29,20 @@ npm run dev
 | `/debug` | 出事时的六步 |
 | `/team` | 个人习惯撑不过三个月时的制度 |
 | `/lies` | 你正在用来回避理解的八句话 |
+| `/skill` | 对着提交复述的 Cursor Skill |
 
 任务卡和复述会存在浏览器 `localStorage`，不会上传。
+
+## 复述门 Skill
+
+把一次 git 提交（或指定 hash、工作区 diff）写成能当 PR 说明的复述文档：关注点、难懂清单、八项风险、排查步骤、90 秒口播、合并裁决。
+
+- Skill：`.cursor/skills/retell-gate/SKILL.md`
+- 模板：`.cursor/skills/retell-gate/template.md`
+- 假复述对照：`.cursor/skills/retell-gate/anti-patterns.md`
+- 产出目录：`docs/retell/`
+
+在 Cursor 里说「分析最新提交」或「复述 `<hash>`」就会走这套流程。例子见 `docs/retell/2026-09-19-2fd4e26.md`。
 
 ## 构建与检查
 
