@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-serif);
+  --font-serif: var(--font-serif);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-stamp: var(--stamp);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-2xl: 10px;
+  --radius-3xl: 12px;
+  --radius-4xl: 14px;
+}
+
+:root {
+  --background: #12100c;
+  --foreground: #efe6d4;
+  --card: #1a1712;
+  --card-foreground: #efe6d4;
+  --popover: #1a1712;
+  --popover-foreground: #efe6d4;
+  --primary: #efe6d4;
+  --primary-foreground: #16130f;
+  --secondary: #2a241c;
+  --secondary-foreground: #efe6d4;
+  --muted: #221e18;
+  --muted-foreground: #b5aa95;
+  --accent: #2f261c;
+  --accent-foreground: #efe6d4;
+  --destructive: #d64537;
+  --border: #3a3228;
+  --input: #3a3228;
+  --ring: #c4a35a;
+  --stamp: #c23a2b;
+  --ok: #8aa35f;
+  --warn: #c4a35a;
+  --chart-1: #c23a2b;
+  --chart-2: #c4a35a;
+  --chart-3: #8aa35f;
+  --chart-4: #b5aa95;
+  --chart-5: #efe6d4;
+  --radius: 0.25rem;
+  --sidebar: #1a1712;
+  --sidebar-foreground: #efe6d4;
+  --sidebar-primary: #efe6d4;
+  --sidebar-primary-foreground: #16130f;
+  --sidebar-accent: #2f261c;
+  --sidebar-accent-foreground: #efe6d4;
+  --sidebar-border: #3a3228;
+  --sidebar-ring: #c4a35a;
+}
+
+.dark {
+  --background: #12100c;
+  --foreground: #efe6d4;
+  --card: #1a1712;
+  --card-foreground: #efe6d4;
+  --popover: #1a1712;
+  --popover-foreground: #efe6d4;
+  --primary: #efe6d4;
+  --primary-foreground: #16130f;
+  --secondary: #2a241c;
+  --secondary-foreground: #efe6d4;
+  --muted: #221e18;
+  --muted-foreground: #b5aa95;
+  --accent: #2f261c;
+  --accent-foreground: #efe6d4;
+  --destructive: #d64537;
+  --border: #3a3228;
+  --input: #3a3228;
+  --ring: #c4a35a;
+  --stamp: #c23a2b;
+  --ok: #8aa35f;
+  --warn: #c4a35a;
+  --chart-1: #c23a2b;
+  --chart-2: #c4a35a;
+  --chart-3: #8aa35f;
+  --chart-4: #b5aa95;
+  --chart-5: #efe6d4;
+  --sidebar: #1a1712;
+  --sidebar-foreground: #efe6d4;
+  --sidebar-primary: #efe6d4;
+  --sidebar-primary-foreground: #16130f;
+  --sidebar-accent: #2f261c;
+  --sidebar-accent-foreground: #efe6d4;
+  --sidebar-border: #3a3228;
+  --sidebar-ring: #c4a35a;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+    background: var(--background);
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 10% -10%, rgba(194, 58, 43, 0.08), transparent),
+      linear-gradient(180deg, rgba(239, 230, 212, 0.03), transparent 28%);
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-serif {
+    font-family: var(--font-serif), "Noto Serif SC", "Songti SC", serif;
+  }
+}
