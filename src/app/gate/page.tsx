@@ -3,7 +3,7 @@ import { PageIntro } from "@/components/page-intro";
 import { RetellGate } from "@/components/retell-gate";
 
 export const metadata: Metadata = {
-  title: "复述门",
+  title: "当场裁决",
   description: "合并前用自己的话复述行为、数据流和失败模式。不确定就不准合。",
 };
 

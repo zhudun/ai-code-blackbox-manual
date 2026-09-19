@@ -32,9 +32,11 @@ npm run dev
 
 任务卡和复述会存在浏览器 `localStorage`，不会上传。
 
-## 构建
+## 构建与检查
 
 ```bash
+npm test
+npm run lint
 npm run build
 npm start
 ```

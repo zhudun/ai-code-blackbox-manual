@@ -1,20 +1,8 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
-
-const sans = Noto_Sans_SC({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
-
-const serif = Noto_Serif_SC({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  weight: ["600", "700"],
-});
 
 const mono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -32,10 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="zh-CN"
-      className={`dark ${sans.variable} ${serif.variable} ${mono.variable} h-full`}
-    >
+    <html lang="zh-CN" className={`dark ${mono.variable} h-full`}>
       <body className="flex min-h-full flex-col">
         <SiteHeader />
         <main className="flex flex-1 flex-col">{children}</main>
