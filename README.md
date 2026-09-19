@@ -37,12 +37,15 @@ npm run dev
 
 把一次 git 提交（或指定 hash、工作区 diff）写成能当 PR 说明的复述文档：关注点、难懂清单、八项风险、排查步骤、90 秒口播、合并裁决。
 
+- 安装说明（先读这个）：`.cursor/skills/retell-gate/INSTALL.md`
 - Skill：`.cursor/skills/retell-gate/SKILL.md`
 - 模板：`.cursor/skills/retell-gate/template.md`
 - 假复述对照：`.cursor/skills/retell-gate/anti-patterns.md`
 - 产出目录：`docs/retell/`
 
-在 Cursor 里说「分析最新提交」或「复述 `<hash>`」就会走这套流程。例子见 `docs/retell/2026-09-19-2fd4e26.md`。
+没有上架任何 skill 市场。能拿到的地方只有 GitHub：<https://github.com/zhudun/ai-code-blackbox-manual>。克隆本仓库不等于已经装好；要把 `.cursor/skills/retell-gate` 拷到 `~/.cursor/skills/retell-gate`（或业务仓库的 `.cursor/skills/`），Agent 才会在别的项目里用它。
+
+在已安装的环境里说「分析最新提交」或「复述 `<hash>`」。例子见 `docs/retell/2026-09-19-2fd4e26.md`。
 
 ## 构建与检查
 

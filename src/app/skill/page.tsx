@@ -15,7 +15,73 @@ export default function SkillPage() {
         lede="手册讲的是制度。Skill 逼模型去做那套制度：读 diff 和函数上下文，按关注点切开，难懂的单独标红，风险写成排查步骤，最后给 90 秒口播。不确定的函数必须写进文档。写不出来就写不准合。"
       />
 
-      <section className="mt-10 grid gap-4 md:grid-cols-2">
+      <section className="mt-10 space-y-4">
+        <h2 className="font-serif text-3xl tracking-tight">怎么装</h2>
+        <p className="text-sm leading-7 text-muted-foreground">
+          完整说明在{" "}
+          <code className="font-mono text-foreground">
+            .cursor/skills/retell-gate/INSTALL.md
+          </code>
+          。下面三层不要混。
+        </p>
+        <ol className="space-y-4">
+          <li className="rounded-lg border border-border bg-card p-5">
+            <p className="font-mono text-[11px] tracking-[0.18em] text-stamp uppercase">
+              1 · 没有上架市场
+            </p>
+            <p className="mt-3 text-sm leading-7">
+              没发 npm，没走 Cursor Marketplace。仓库里也没有 marketplace
+              清单。skills.sh 若出现同名页，只是按 GitHub 的 owner/repo
+              做发现，文件不托管在那儿。
+            </p>
+          </li>
+          <li className="rounded-lg border border-border bg-card p-5">
+            <p className="font-mono text-[11px] tracking-[0.18em] text-stamp uppercase">
+              2 · 只从 GitHub 拿
+            </p>
+            <p className="mt-3 text-sm leading-7">
+              <a
+                href="https://github.com/zhudun/ai-code-blackbox-manual"
+                className="underline underline-offset-4"
+              >
+                github.com/zhudun/ai-code-blackbox-manual
+              </a>
+              。
+              <code className="font-mono text-foreground">
+                npx skills add zhudun/ai-code-blackbox-manual
+              </code>{" "}
+              和 git clone 拉的是同一份。Skill 在{" "}
+              <code className="font-mono text-foreground">
+                .cursor/skills/retell-gate/
+              </code>
+              ，不要把整个 Next.js 站点拷进 skills 目录。
+            </p>
+          </li>
+          <li className="rounded-lg border border-border bg-card p-5">
+            <p className="font-mono text-[11px] tracking-[0.18em] text-stamp uppercase">
+              3 · 拿到 ≠ 已安装
+            </p>
+            <p className="mt-3 text-sm leading-7">
+              要在任意项目里用，把这一层拷到本机：
+            </p>
+            <pre className="mt-3 overflow-auto font-mono text-[12px] leading-6 text-muted-foreground">
+              {`git clone https://github.com/zhudun/ai-code-blackbox-manual.git
+mkdir -p ~/.cursor/skills
+cp -R ai-code-blackbox-manual/.cursor/skills/retell-gate \\
+  ~/.cursor/skills/retell-gate`}
+            </pre>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              确认{" "}
+              <code className="font-mono text-foreground">
+                ~/.cursor/skills/retell-gate/SKILL.md
+              </code>{" "}
+              在。然后打开你要复述的业务仓库，说「分析最新提交」。没拷这一步，本机就还没装。
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section className="mt-12 grid gap-4 md:grid-cols-2">
         <article className="rounded-lg border border-border bg-card p-5">
           <p className="font-mono text-[11px] tracking-[0.18em] text-muted-foreground uppercase">
             怎么用
